@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Part Looper",
+  "version": "1.0",
+  "description": "Loops a specific section of a YouTube video.",
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
