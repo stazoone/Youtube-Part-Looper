@@ -40,7 +40,7 @@ function sendMessageToContentScript(message) {
                     alert("Could not connect to YouTube page. Please refresh the page and try again.");
                   }
                 });
-              }, 500);
+              }, 2000);
             } else {
               console.error("YT Looper: Script injection failed!");
               alert("Could not inject content script. Please refresh the YouTube page and try again.");
